@@ -8,6 +8,7 @@ import 'leaflet/dist/leaflet.css';
 
 Vue.config.productionTip = false
 
+
 Vue.component('l-map', LMap);
 Vue.component('l-tile-layer', LTileLayer);
 Vue.component('l-marker', LMarker);
