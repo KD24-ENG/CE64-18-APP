@@ -1,8 +1,8 @@
 <template>
     <nav>
         <v-toolbar flat app>
-            <v-app-bar-nav-icon class="grey--text" @click="drawer = !drawer"></v-app-bar-nav-icon>
-            <v-toolbar-title class="grey--text">
+            <v-app-bar-nav-icon class="blue-grey--text text--darken-2" @click="drawer = !drawer"></v-app-bar-nav-icon>
+            <v-toolbar-title class="grey--text text--darken-2">
                 <span class="display-1 font-weight-black green--text">BTRS</span>
                 <span class="font-weight-bold">Bangkok Traffic Reporting System</span>
             </v-toolbar-title>
