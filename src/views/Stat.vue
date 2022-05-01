@@ -1,5 +1,5 @@
 <template>
-  <div class="stat" v-cloak>
+    <div class="stat" v-cloak>
     <v-container fluid>
         <v-row>
             <v-col class="d-flex ml-10" elevation="3" cols="6" sm="3">
@@ -7,21 +7,21 @@
             </v-col>
             <v-col class="d-flex ml-10" elevation="3" cols="6" sm="3">
                 <v-select :items="date" label="เลือกวัน" solo></v-select>
-            </v-col>
+            </v-col>            <div class="ts"><p class="grey--text text--darken-2 body-2 font-weight-bold"> {{time}} </p></div>
             </v-row>
     </v-container>
-      <l-map class="buttom" style="height: 610px" :zoom="zoom" :center="center">
-      <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-      <l-polyline class="lat01" :l-style="{weight: 5 }" :lat-lngs="polyline01.lat01" :color="polyline01.color"></l-polyline>
-      <l-polyline class="lat02" :l-style="{weight: 5 }" :lat-lngs="polyline02.lat02" :color="polyline02.color"></l-polyline>
-      <l-polyline class="lat1" :l-style="{weight: 5 }" :lat-lngs="polyline1.lat1" :color="polyline1.color"></l-polyline>
-      <l-polyline class="lat2" :l-style="{weight: 5 }" :lat-lngs="polyline2.lat2" :color="polyline2.color"></l-polyline>
-      <l-polyline class="lat3" :l-style="{weight: 5 }" :lat-lngs="polyline3.lat3" :color="polyline3.color"></l-polyline>
-      <l-polyline class="lat4" :l-style="{weight: 5 }" :lat-lngs="polyline4.lat4" :color="polyline4.color"></l-polyline>
-      <l-polyline class="lat5" :l-style="{weight: 5 }" :lat-lngs="polyline5.lat5" :color="polyline5.color"></l-polyline>
-      <l-polyline class="lat6" :l-style="{weight: 5 }" :lat-lngs="polyline6.lat6" :color="polyline6.color"></l-polyline>
-      </l-map>
-  </div>
+    <l-map class="buttom" style="height: 610px" :zoom="zoom" :center="center">
+    <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+    <l-polyline class="lat01" :l-style="{weight: 5 }" :lat-lngs="polyline01.lat01" :color="polyline01.color"></l-polyline>
+    <l-polyline class="lat02" :l-style="{weight: 5 }" :lat-lngs="polyline02.lat02" :color="polyline02.color"></l-polyline>
+    <l-polyline class="lat1" :l-style="{weight: 5 }" :lat-lngs="polyline1.lat1" :color="polyline1.color"></l-polyline>
+    <l-polyline class="lat2" :l-style="{weight: 5 }" :lat-lngs="polyline2.lat2" :color="polyline2.color"></l-polyline>
+    <l-polyline class="lat3" :l-style="{weight: 5 }" :lat-lngs="polyline3.lat3" :color="polyline3.color"></l-polyline>
+    <l-polyline class="lat4" :l-style="{weight: 5 }" :lat-lngs="polyline4.lat4" :color="polyline4.color"></l-polyline>
+    <l-polyline class="lat5" :l-style="{weight: 5 }" :lat-lngs="polyline5.lat5" :color="polyline5.color"></l-polyline>
+    <l-polyline class="lat6" :l-style="{weight: 5 }" :lat-lngs="polyline6.lat6" :color="polyline6.color"></l-polyline>
+    </l-map>
+</div>
 </template>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
@@ -35,7 +35,7 @@ import {LMap, LTileLayer, LPolyline} from 'vue2-leaflet';
 import axios from 'axios';
 
 export default {
-  name: 'Stat',
+    name: 'Stat',
     components: {
     LMap,
     LTileLayer,
@@ -43,49 +43,49 @@ export default {
     },
     data () {
     return {
-      items: ['ราชวิถี', 'นครสวรรค์', 'พระราม5', 'ลาดพร้าว', 'ศรีอยุธยา', 'สามเสน', 'หลานหลวง', 'พระราม4', 'พญาไท', 'ดินแดง', 'พระราม9', 'ราชปรารภ', 'จตุรทิศ', 'พิษณุโลก', 'เพชรบุรี', 'สวรรคโลก', 'เทอดดำริ', 'นครไชยศรี', 'มหาไชย', 'ราชดำเนินนอก', 'กรุงเกษม', 'บรรทัดทอง', 'ประดิพัทธ์', 'สมเด็จพระปิ่นเกล้า', 'ราชดำริ', 'รางน้ำ', 'บำรุงเมือง', 'สิรินธร', 'พระราม8', 'สุทธิสารวินิจฉัย', 'พระสุเมรุ', 'บวรนิเวศน์', 'ไกรสีห์', 'ศรีอยุธยา', 'เพชรอุทัย', 'หลวง', 'พลับพลาไชย', 'ยุคล1', 'ยุคล2', 'จักรวรรดิ', 'เยาวราช', 'จักรเพชร', 'ราชดำเนินกลาง', 'ดินสอ', 'จักรพรรดิ์พงษ์', 'ตะนาว', 'ประชาธิปไตย', 'อรุณอมรินทร์', 'ราชดำเนินใน', 'สนามไชย', 'ราชินี', 'พระปกเกล้า', 'อิสรภาพ', 'ทหาร', 'เตชะวณิช', 'นครราชสีมา', 'รองเมือง', 'พระราม1', 'ประชาธิปก', 'สมเด็จเจ้าพระยา', 'อังรีดูนังต์', 'เจริญกรุง', 'วิทยุ', 'ลาดหญ้า', 'อินทรพิทักษ์', 'สมเด็จพระเจ้าตากสิน', 'เพชรเกษม', 'ประดิษฐ์มนูธรรม', 'นิคมมักกะสัน', 'สีลม', 'เจริญนคร', 'สุทธาวาส', 'เลียบทางรถไฟตลิ่งชัน', 'บรมราชชนนี', 'รัชดาภิเษก', 'เทอดไท', 'สาทรเหนือ', 'ประชาราษฏร์ สาย1', 'จรัญสนิทวงศ์', 'มเหสักข์', 'มหานคร', 'มหาเศรษฐ์', 'มหาพฤฒาราม', 'สันติภาพ', 'มิตรพันธ์', 'ไมตรีจิตต์', 'นราธิวาสราชนครินทร์', 'สุรวงศ์', 'สี่พระยา', 'ทรงวาด', 'ราชวงศ์', 'มิตรภาพไทย-จีน', 'ตรีมิตร', 'ทรงเสริม', 'ทรงสวัสดิ์', 'วานิช1', 'เยาวพานิช', 'ผดุงด้าว', 'แปลงนาม', 'พลับพลาไชย', 'สารสิน', 'จันทร์', 'คอนแวนต์', 'ศาลาแดง', 'ข้าวหลาม', 'มังกร', 'สุขุมวิท71', 'เอกมัย', 'ดวงพิทักษ์', 'หับเผย', 'หลักเมือง', 'เพลินจิต', 'รัชดาภิเษก', 'อโศกมนตรี', 'สาธุประดิษฐ์', 'ยานนาวา', 'เจริญราษฎร์', 'นางลิ้นจี่', 'สวนพลู', 'รามคำแหง', 'ลาดพร้าว64', 'วัฒนธรรม', 'เทียมร่วมมิตร', 'ประชาอุทิศ', 'หัวหมาก', 'พัฒนาการ', 'อ่อนนุช', 'ศรีนครินทร์', 'วชิรธรรมสาธิต', 'นวมินทร์', 'กรุงเทพกรีฑา', 'ศรีนครินทร์-ร่มเกล้า'],
-      date: ['วันทำงาน', 'วันหยุด'],
-      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      attribution: '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      zoom: 15,
-      center: [13.76492902071622, 100.53823436762788],
-      time: [],
-      polyline01: {
-          lat01: [],
-          color: 'MediumSeaGreen'
-      },
-      polyline02: {
-          lat02: [],
-          color: 'MediumSeaGreen'
-      },
-      polyline1: {
-          lat1: [],
-          color: 'red'
-      },
-      polyline2: {
-          lat2: [],
-          color: 'yellow'
-      },
-      polyline3: {
-          lat3: [],
-          color: 'green'
-      },
-      polyline4: {
-          lat4: [],
-          color: 'red'
-      },
-      polyline5: {
-          lat5: [],
-          color: 'yellow'
-      },
-      polyline6: {
-          lat6: [],
-          color: 'green'
-      }
+        items: ['ราชวิถี', 'นครสวรรค์', 'พระราม5', 'ลาดพร้าว', 'ศรีอยุธยา', 'สามเสน', 'หลานหลวง', 'พระราม4', 'พญาไท', 'ดินแดง', 'พระราม9', 'ราชปรารภ', 'จตุรทิศ', 'พิษณุโลก', 'เพชรบุรี', 'สวรรคโลก', 'เทอดดำริ', 'นครไชยศรี', 'มหาไชย', 'ราชดำเนินนอก', 'กรุงเกษม', 'บรรทัดทอง', 'ประดิพัทธ์', 'สมเด็จพระปิ่นเกล้า', 'ราชดำริ', 'รางน้ำ', 'บำรุงเมือง', 'สิรินธร', 'พระราม8', 'สุทธิสารวินิจฉัย', 'พระสุเมรุ', 'บวรนิเวศน์', 'ไกรสีห์', 'ศรีอยุธยา', 'เพชรอุทัย', 'หลวง', 'พลับพลาไชย', 'ยุคล1', 'ยุคล2', 'จักรวรรดิ', 'เยาวราช', 'จักรเพชร', 'ราชดำเนินกลาง', 'ดินสอ', 'จักรพรรดิ์พงษ์', 'ตะนาว', 'ประชาธิปไตย', 'อรุณอมรินทร์', 'ราชดำเนินใน', 'สนามไชย', 'ราชินี', 'พระปกเกล้า', 'อิสรภาพ', 'ทหาร', 'เตชะวณิช', 'นครราชสีมา', 'รองเมือง', 'พระราม1', 'ประชาธิปก', 'สมเด็จเจ้าพระยา', 'อังรีดูนังต์', 'เจริญกรุง', 'วิทยุ', 'ลาดหญ้า', 'อินทรพิทักษ์', 'สมเด็จพระเจ้าตากสิน', 'เพชรเกษม', 'ประดิษฐ์มนูธรรม', 'นิคมมักกะสัน', 'สีลม', 'เจริญนคร', 'สุทธาวาส', 'เลียบทางรถไฟตลิ่งชัน', 'บรมราชชนนี', 'รัชดาภิเษก', 'เทอดไท', 'สาทรเหนือ', 'ประชาราษฏร์ สาย1', 'จรัญสนิทวงศ์', 'มเหสักข์', 'มหานคร', 'มหาเศรษฐ์', 'มหาพฤฒาราม', 'สันติภาพ', 'มิตรพันธ์', 'ไมตรีจิตต์', 'นราธิวาสราชนครินทร์', 'สุรวงศ์', 'สี่พระยา', 'ทรงวาด', 'ราชวงศ์', 'มิตรภาพไทย-จีน', 'ตรีมิตร', 'ทรงเสริม', 'ทรงสวัสดิ์', 'วานิช1', 'เยาวพานิช', 'ผดุงด้าว', 'แปลงนาม', 'พลับพลาไชย', 'สารสิน', 'จันทร์', 'คอนแวนต์', 'ศาลาแดง', 'ข้าวหลาม', 'มังกร', 'สุขุมวิท71', 'เอกมัย', 'ดวงพิทักษ์', 'หับเผย', 'หลักเมือง', 'เพลินจิต', 'รัชดาภิเษก', 'อโศกมนตรี', 'สาธุประดิษฐ์', 'ยานนาวา', 'เจริญราษฎร์', 'นางลิ้นจี่', 'สวนพลู', 'รามคำแหง', 'ลาดพร้าว64', 'วัฒนธรรม', 'เทียมร่วมมิตร', 'ประชาอุทิศ', 'หัวหมาก', 'พัฒนาการ', 'อ่อนนุช', 'ศรีนครินทร์', 'วชิรธรรมสาธิต', 'นวมินทร์', 'กรุงเทพกรีฑา', 'ศรีนครินทร์-ร่มเกล้า'],
+        date: ['วันทำงาน', 'วันหยุด'],
+        url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        attribution: '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+        zoom: 15,
+        center: [13.76492902071622, 100.53823436762788],
+        time: [],
+        polyline01: {
+            lat01: [],
+            color: 'MediumSeaGreen'
+        },
+        polyline02: {
+            lat02: [],
+            color: 'MediumSeaGreen'
+        },
+        polyline1: {
+            lat1: [],
+            color: 'red'
+        },
+        polyline2: {
+            lat2: [],
+            color: 'yellow'
+        },
+        polyline3: {
+            lat3: [],
+            color: 'green'
+        },
+        polyline4: {
+            lat4: [],
+            color: 'red'
+        },
+        polyline5: {
+            lat5: [],
+            color: 'yellow'
+        },
+        polyline6: {
+            lat6: [],
+            color: 'green'
+        }
     }     
-  },
+    },
         created() {
-            axios.get('http://localhost:8080/service/zcoms/fcount.php')
+            axios.get('http://localhost:8080/service/zcoms/time.php')
             .then((response) => {
                     this.time = response.data.response[0].ts
             })
@@ -93,7 +93,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/fwd0.php')
+            axios.get('http://localhost:8080/service/rdstat/fwd0.php')
             .then((response) => {
                 let temp1 = []
 
@@ -120,7 +120,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/bwd0.php')
+            axios.get('http://localhost:8080/service/rdstat/bwd0.php')
             .then((response) => {
                 let temp1 = []
 
@@ -147,7 +147,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/fwd1.php')
+            axios.get('http://localhost:8080/service/rdstat/fwd1.php')
             .then((response) => {
                 let temp1 = []
 
@@ -174,7 +174,7 @@ export default {
                 console.log(err)
             })
             
-            axios.get('http://localhost:8080/service/roadstatus/fwd2.php')
+            axios.get('http://localhost:8080/service/rdstat/fwd2.php')
             .then((response) => {
                 let temp1 = []
 
@@ -201,7 +201,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/fwd3.php')
+            axios.get('http://localhost:8080/service/rdstat/fwd3.php')
             .then((response) => {
                 let temp1 = []
 
@@ -228,7 +228,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/bwd1.php')
+            axios.get('http://localhost:8080/service/rdstat/bwd1.php')
             .then((response) => {
                 let temp1 = []
 
@@ -255,7 +255,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/bwd2.php')
+            axios.get('http://localhost:8080/service/rdstat/bwd2.php')
             .then((response) => {
                 let temp1 = []
 
@@ -282,7 +282,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/bwd3.php')
+            axios.get('http://localhost:8080/service/rdstat/bwd3.php')
             .then((response) => {
                 let temp1 = []
 
@@ -323,5 +323,8 @@ export default {
 .stat {
     margin: -20px 15px 10px 15px;
 }
+/* .ts {
+    margin-top: -20px;
+} */
 
 </style>

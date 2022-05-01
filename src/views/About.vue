@@ -1,8 +1,8 @@
 <template>
     <div class="about">
         <!-- red--text text--lighten-1 -->
-        <p class="green--text text--darken-3 headline font-weight-bold text-center mt-16">เกี่ยวกับเรา</p>
-        <h3 class="green--text text--darken-3 title font-weight-bold text-center">นางสาวกันต์ดนย์ ทัพมาก<br>นางสาวจริญญา แสงวงศ์
+        <p class="grey--text text--darken-3 headline font-weight-bold text-center mt-16">เกี่ยวกับเรา</p>
+        <h3 class="grey--text text--darken-2 title font-weight-bold text-center">นางสาวกันต์ดนย์ ทัพมาก<br>นางสาวจริญญา แสงวงศ์
         <br>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h3>
     </div>
 </template>

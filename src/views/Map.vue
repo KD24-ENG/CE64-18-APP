@@ -90,7 +90,7 @@ export default {
         }       
     },
         created() {
-            axios.get('http://localhost:8080/service/zcoms/fcount.php')
+            axios.get('http://localhost:8080/service/zcoms/time.php')
             .then((response) => {
                     this.time = response.data.response[0].ts
             })
