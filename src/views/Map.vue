@@ -90,7 +90,7 @@ export default {
         }       
     },
         created() {
-            axios.get('http://localhost:8080/service/zcoms/time.php')
+            axios.get('https://kd24-eng.github.io/bkk/time.json')
             .then((response) => {
                     this.time = response.data.response[0].ts
             })
@@ -98,7 +98,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/fwd0.php')
+            axios.get('https://kd24-eng.github.io/bkk/fwd0.json')
             .then((response) => {
                 let temp1 = []
 
@@ -125,7 +125,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/bwd0.php')
+            axios.get('https://kd24-eng.github.io/bkk/bwd0.json')
             .then((response) => {
                 let temp1 = []
 
@@ -152,7 +152,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/fwd1.php')
+            axios.get('https://kd24-eng.github.io/bkk/fwd1.json')
             .then((response) => {
                 let temp1 = []
 
@@ -179,7 +179,7 @@ export default {
                 console.log(err)
             })
             
-            axios.get('http://localhost:8080/service/roadstatus/fwd2.php')
+            axios.get('https://kd24-eng.github.io/bkk/fwd2.json')
             .then((response) => {
                 let temp1 = []
 
@@ -206,7 +206,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/fwd3.php')
+            axios.get('https://kd24-eng.github.io/bkk/fwd3.json')
             .then((response) => {
                 let temp1 = []
 
@@ -233,7 +233,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/bwd1.php')
+            axios.get('https://kd24-eng.github.io/bkk/bwd1.json')
             .then((response) => {
                 let temp1 = []
 
@@ -260,7 +260,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/bwd2.php')
+            axios.get('https://kd24-eng.github.io/bkk/bwd2.json')
             .then((response) => {
                 let temp1 = []
 
@@ -287,7 +287,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/roadstatus/bwd3.php')
+            axios.get('https://kd24-eng.github.io/bkk/bwd3.json')
             .then((response) => {
                 let temp1 = []
 
