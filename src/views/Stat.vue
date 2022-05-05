@@ -85,7 +85,7 @@ export default {
     }     
     },
         created() {
-            axios.get('http://localhost:8080/service/zcoms/time.php')
+            axios.get('https://kd24-eng.github.io/bkk/time.json')
             .then((response) => {
                     this.time = response.data.response[0].ts
             })
@@ -93,7 +93,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/rdstat/fwd0.php')
+            axios.get('https://kd24-eng.github.io/bkk/sf0.json')
             .then((response) => {
                 let temp1 = []
 
@@ -120,7 +120,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/rdstat/bwd0.php')
+            axios.get('https://kd24-eng.github.io/bkk/sb0.json')
             .then((response) => {
                 let temp1 = []
 
@@ -147,7 +147,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/rdstat/fwd1.php')
+            axios.get('https://kd24-eng.github.io/bkk/sf1.json')
             .then((response) => {
                 let temp1 = []
 
@@ -174,7 +174,7 @@ export default {
                 console.log(err)
             })
             
-            axios.get('http://localhost:8080/service/rdstat/fwd2.php')
+            axios.get('https://kd24-eng.github.io/bkk/sf2.json')
             .then((response) => {
                 let temp1 = []
 
@@ -201,7 +201,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/rdstat/fwd3.php')
+            axios.get('https://kd24-eng.github.io/bkk/sf3.json')
             .then((response) => {
                 let temp1 = []
 
@@ -228,7 +228,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/rdstat/bwd1.php')
+            axios.get('https://kd24-eng.github.io/bkk/sb1.json')
             .then((response) => {
                 let temp1 = []
 
@@ -255,7 +255,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/rdstat/bwd2.php')
+            axios.get('https://kd24-eng.github.io/bkk/sb2.json')
             .then((response) => {
                 let temp1 = []
 
@@ -282,7 +282,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('http://localhost:8080/service/rdstat/bwd3.php')
+            axios.get('https://kd24-eng.github.io/bkk/sb3.json')
             .then((response) => {
                 let temp1 = []
 
