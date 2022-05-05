@@ -3,7 +3,7 @@
     <v-container fluid>
         <v-row>
             <v-col class="d-flex ml-10" elevation="3" cols="6" sm="3">
-                <v-select :items="road" label="เลือกถนน" solo></v-select>
+                <v-select :items="items" label="เลือกถนน" solo></v-select>
             </v-col>
             <v-col class="d-flex ml-10" elevation="3" cols="6" sm="3">
                 <v-select :items="date" label="เลือกวัน" solo></v-select>
