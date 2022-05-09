@@ -98,7 +98,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('https://kd24-eng.github.io/bkk/fwd0.json')
+            axios.get('https://kd24-eng.github.io/bkk/mfwd0.json')
             .then((response) => {
                 let temp1 = []
 
@@ -125,7 +125,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('https://kd24-eng.github.io/bkk/bwd0.json')
+            axios.get('https://kd24-eng.github.io/bkk/mbwd0.json')
             .then((response) => {
                 let temp1 = []
 
@@ -152,7 +152,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('https://kd24-eng.github.io/bkk/fwd1.json')
+            axios.get('https://kd24-eng.github.io/bkk/mfwd1.json')
             .then((response) => {
                 let temp1 = []
 
@@ -179,7 +179,7 @@ export default {
                 console.log(err)
             })
             
-            axios.get('https://kd24-eng.github.io/bkk/fwd2.json')
+            axios.get('https://kd24-eng.github.io/bkk/mfwd2.json')
             .then((response) => {
                 let temp1 = []
 
@@ -206,7 +206,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('https://kd24-eng.github.io/bkk/fwd3.json')
+            axios.get('https://kd24-eng.github.io/bkk/mfwd3.json')
             .then((response) => {
                 let temp1 = []
 
@@ -233,7 +233,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('https://kd24-eng.github.io/bkk/bwd1.json')
+            axios.get('https://kd24-eng.github.io/bkk/mbwd1.json')
             .then((response) => {
                 let temp1 = []
 
@@ -260,7 +260,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('https://kd24-eng.github.io/bkk/bwd2.json')
+            axios.get('https://kd24-eng.github.io/bkk/mbwd2.json')
             .then((response) => {
                 let temp1 = []
 
@@ -287,7 +287,7 @@ export default {
                 console.log(err)
             })
 
-            axios.get('https://kd24-eng.github.io/bkk/bwd3.json')
+            axios.get('https://kd24-eng.github.io/bkk/mbwd3.json')
             .then((response) => {
                 let temp1 = []
 
