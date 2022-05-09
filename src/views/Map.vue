@@ -4,7 +4,7 @@
             <v-col class="d-flex ml-10" elevation="3" cols="4" sm="3">
                 <v-select :items="items" label="เลือกถนน" solo></v-select>
             </v-col>
-            <v-checkbox v-model="checkbox">
+            <!-- <v-checkbox v-model="checkbox">
                 <template v-slot:label>
                     <div>
                         ปัจจุบัน
@@ -18,7 +18,8 @@
                 </v-tooltip>
         </div>
                 </template>
-    </v-checkbox>        <div class="ts"><p class="grey--text text--darken-2 body-2 font-weight-bold"> {{time}} </p></div>
+    </v-checkbox -->
+    <div class="ts"><p class="grey--text text--darken-2 body-2 font-weight-bold"> {{time}} </p></div>
         </v-row>
         <l-map class="buttom" style="height: 610px" :zoom="zoom" :center="center">
         <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
